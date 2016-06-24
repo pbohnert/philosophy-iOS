@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D005E9671D1DB3150019AED1"
+               BuildableName = "gettingToPhilosophy.app"
+               BlueprintName = "gettingToPhilosophy"
+               ReferencedContainer = "container:gettingToPhilosophy.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D005E97B1D1DB3150019AED1"
+               BuildableName = "gettingToPhilosophyTests.xctest"
+               BlueprintName = "gettingToPhilosophyTests"
+               ReferencedContainer = "container:gettingToPhilosophy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D005E9861D1DB3150019AED1"
+               BuildableName = "gettingToPhilosophyUITests.xctest"
+               BlueprintName = "gettingToPhilosophyUITests"
+               ReferencedContainer = "container:gettingToPhilosophy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D005E9671D1DB3150019AED1"
+            BuildableName = "gettingToPhilosophy.app"
+            BlueprintName = "gettingToPhilosophy"
+            ReferencedContainer = "container:gettingToPhilosophy.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D005E9671D1DB3150019AED1"
+            BuildableName = "gettingToPhilosophy.app"
+            BlueprintName = "gettingToPhilosophy"
+            ReferencedContainer = "container:gettingToPhilosophy.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D005E9671D1DB3150019AED1"
+            BuildableName = "gettingToPhilosophy.app"
+            BlueprintName = "gettingToPhilosophy"
+            ReferencedContainer = "container:gettingToPhilosophy.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

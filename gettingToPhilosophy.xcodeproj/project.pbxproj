@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25307488E4326F275359D293 /* Pods_gettingToPhilosophyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06622758F7B3FD1A102F4B0B /* Pods_gettingToPhilosophyTests.framework */; };
+		9949F65EAA53E7BDDAFFBFC6 /* Pods_gettingToPhilosophy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F585711A1D49F765A9214041 /* Pods_gettingToPhilosophy.framework */; };
+		B03389A691AE49FCECBA4B14 /* Pods_gettingToPhilosophyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C8F89312251675B72FFA56 /* Pods_gettingToPhilosophyUITests.framework */; };
 		D005E96C1D1DB3150019AED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005E96B1D1DB3150019AED1 /* AppDelegate.swift */; };
-		D005E96E1D1DB3150019AED1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005E96D1D1DB3150019AED1 /* ViewController.swift */; };
 		D005E9711D1DB3150019AED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D005E96F1D1DB3150019AED1 /* Main.storyboard */; };
 		D005E9731D1DB3150019AED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D005E9721D1DB3150019AED1 /* Assets.xcassets */; };
 		D005E9761D1DB3150019AED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D005E9741D1DB3150019AED1 /* LaunchScreen.storyboard */; };
 		D005E9811D1DB3150019AED1 /* gettingToPhilosophyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005E9801D1DB3150019AED1 /* gettingToPhilosophyTests.swift */; };
 		D005E98C1D1DB3150019AED1 /* gettingToPhilosophyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005E98B1D1DB3150019AED1 /* gettingToPhilosophyUITests.swift */; };
+		D005E99A1D1DB9580019AED1 /* PhiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005E9991D1DB9580019AED1 /* PhiloViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06622758F7B3FD1A102F4B0B /* Pods_gettingToPhilosophyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gettingToPhilosophyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1872EB6AB55C2E286EB4790E /* Pods-gettingToPhilosophyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gettingToPhilosophyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gettingToPhilosophyTests/Pods-gettingToPhilosophyTests.release.xcconfig"; sourceTree = "<group>"; };
+		48C8F89312251675B72FFA56 /* Pods_gettingToPhilosophyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gettingToPhilosophyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F50766A3D0F036E68C971C3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E454842C919956918965308 /* Pods-gettingToPhilosophy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gettingToPhilosophy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gettingToPhilosophy/Pods-gettingToPhilosophy.debug.xcconfig"; sourceTree = "<group>"; };
+		B47C596379BCBA85BAA0A424 /* Pods-gettingToPhilosophyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gettingToPhilosophyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gettingToPhilosophyUITests/Pods-gettingToPhilosophyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA1BE03A03C6A1B9E480D06A /* Pods-gettingToPhilosophyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gettingToPhilosophyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gettingToPhilosophyTests/Pods-gettingToPhilosophyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD2026E3E8FBD5DCF7F202AD /* Pods-gettingToPhilosophy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gettingToPhilosophy.release.xcconfig"; path = "Pods/Target Support Files/Pods-gettingToPhilosophy/Pods-gettingToPhilosophy.release.xcconfig"; sourceTree = "<group>"; };
 		D005E9681D1DB3150019AED1 /* gettingToPhilosophy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gettingToPhilosophy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D005E96B1D1DB3150019AED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D005E96D1D1DB3150019AED1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D005E9701D1DB3150019AED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D005E9721D1DB3150019AED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D005E9751D1DB3150019AED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,10 @@
 		D005E9871D1DB3150019AED1 /* gettingToPhilosophyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gettingToPhilosophyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D005E98B1D1DB3150019AED1 /* gettingToPhilosophyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gettingToPhilosophyUITests.swift; sourceTree = "<group>"; };
 		D005E98D1D1DB3150019AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D005E9991D1DB9580019AED1 /* PhiloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhiloViewController.swift; sourceTree = "<group>"; };
+		D0DE46D81D1DBDCA00484D0E /* gettingToPhilosophy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gettingToPhilosophy-Bridging-Header.h"; sourceTree = "<group>"; };
+		E24810A014758C09C1AAEC54 /* Pods-gettingToPhilosophyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gettingToPhilosophyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gettingToPhilosophyUITests/Pods-gettingToPhilosophyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F585711A1D49F765A9214041 /* Pods_gettingToPhilosophy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gettingToPhilosophy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9949F65EAA53E7BDDAFFBFC6 /* Pods_gettingToPhilosophy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25307488E4326F275359D293 /* Pods_gettingToPhilosophyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03389A691AE49FCECBA4B14 /* Pods_gettingToPhilosophyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4681192FD20CE76B6E25AF5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E454842C919956918965308 /* Pods-gettingToPhilosophy.debug.xcconfig */,
+				CD2026E3E8FBD5DCF7F202AD /* Pods-gettingToPhilosophy.release.xcconfig */,
+				CA1BE03A03C6A1B9E480D06A /* Pods-gettingToPhilosophyTests.debug.xcconfig */,
+				1872EB6AB55C2E286EB4790E /* Pods-gettingToPhilosophyTests.release.xcconfig */,
+				E24810A014758C09C1AAEC54 /* Pods-gettingToPhilosophyUITests.debug.xcconfig */,
+				B47C596379BCBA85BAA0A424 /* Pods-gettingToPhilosophyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A67F096E1D412CBA87BFA0D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F50766A3D0F036E68C971C3 /* Pods.framework */,
+				F585711A1D49F765A9214041 /* Pods_gettingToPhilosophy.framework */,
+				06622758F7B3FD1A102F4B0B /* Pods_gettingToPhilosophyTests.framework */,
+				48C8F89312251675B72FFA56 /* Pods_gettingToPhilosophyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D005E95F1D1DB3150019AED1 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +122,8 @@
 				D005E97F1D1DB3150019AED1 /* gettingToPhilosophyTests */,
 				D005E98A1D1DB3150019AED1 /* gettingToPhilosophyUITests */,
 				D005E9691D1DB3150019AED1 /* Products */,
+				A67F096E1D412CBA87BFA0D3 /* Frameworks */,
+				4681192FD20CE76B6E25AF5E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +140,13 @@
 		D005E96A1D1DB3150019AED1 /* gettingToPhilosophy */ = {
 			isa = PBXGroup;
 			children = (
-				D005E96B1D1DB3150019AED1 /* AppDelegate.swift */,
-				D005E96D1D1DB3150019AED1 /* ViewController.swift */,
+				D005E9991D1DB9580019AED1 /* PhiloViewController.swift */,
 				D005E96F1D1DB3150019AED1 /* Main.storyboard */,
+				D005E96B1D1DB3150019AED1 /* AppDelegate.swift */,
 				D005E9721D1DB3150019AED1 /* Assets.xcassets */,
 				D005E9741D1DB3150019AED1 /* LaunchScreen.storyboard */,
 				D005E9771D1DB3150019AED1 /* Info.plist */,
+				D0DE46D81D1DBDCA00484D0E /* gettingToPhilosophy-Bridging-Header.h */,
 			);
 			path = gettingToPhilosophy;
 			sourceTree = "<group>";
@@ -132,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D005E9901D1DB3150019AED1 /* Build configuration list for PBXNativeTarget "gettingToPhilosophy" */;
 			buildPhases = (
+				B923C70DC3F5EC88519F7CE5 /* [CP] Check Pods Manifest.lock */,
 				D005E9641D1DB3150019AED1 /* Sources */,
 				D005E9651D1DB3150019AED1 /* Frameworks */,
 				D005E9661D1DB3150019AED1 /* Resources */,
+				D6BF5815AE4F08DDF794A5EE /* [CP] Embed Pods Frameworks */,
+				FFC615888A8B847DA200CF50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D005E9931D1DB3150019AED1 /* Build configuration list for PBXNativeTarget "gettingToPhilosophyTests" */;
 			buildPhases = (
+				FF43F70B1F27CD95454B95AC /* [CP] Check Pods Manifest.lock */,
 				D005E9781D1DB3150019AED1 /* Sources */,
 				D005E9791D1DB3150019AED1 /* Frameworks */,
 				D005E97A1D1DB3150019AED1 /* Resources */,
+				9F5A8099950ED4D7479E6716 /* [CP] Embed Pods Frameworks */,
+				A642DC881628C6708C46297F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D005E9961D1DB3150019AED1 /* Build configuration list for PBXNativeTarget "gettingToPhilosophyUITests" */;
 			buildPhases = (
+				5EF1D1F173EE0191B5923DDE /* [CP] Check Pods Manifest.lock */,
 				D005E9831D1DB3150019AED1 /* Sources */,
 				D005E9841D1DB3150019AED1 /* Frameworks */,
 				D005E9851D1DB3150019AED1 /* Resources */,
+				F92E79EF2F9255A97CCB56C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +245,7 @@
 				TargetAttributes = {
 					D005E9671D1DB3150019AED1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 776A9V2Z6R;
 					};
 					D005E97B1D1DB3150019AED1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -251,12 +304,135 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EF1D1F173EE0191B5923DDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F5A8099950ED4D7479E6716 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gettingToPhilosophyTests/Pods-gettingToPhilosophyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A642DC881628C6708C46297F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gettingToPhilosophyTests/Pods-gettingToPhilosophyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B923C70DC3F5EC88519F7CE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6BF5815AE4F08DDF794A5EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gettingToPhilosophy/Pods-gettingToPhilosophy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F92E79EF2F9255A97CCB56C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gettingToPhilosophyUITests/Pods-gettingToPhilosophyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF43F70B1F27CD95454B95AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC615888A8B847DA200CF50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gettingToPhilosophy/Pods-gettingToPhilosophy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D005E9641D1DB3150019AED1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D005E96E1D1DB3150019AED1 /* ViewController.swift in Sources */,
+				D005E99A1D1DB9580019AED1 /* PhiloViewController.swift in Sources */,
 				D005E96C1D1DB3150019AED1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,28 +573,42 @@
 		};
 		D005E9911D1DB3150019AED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E454842C919956918965308 /* Pods-gettingToPhilosophy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = gettingToPhilosophy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bluelotuslabs.gettingToPhilosophy;
+				PRODUCT_BUNDLE_IDENTIFIER = ptb.gettingToPhilosophy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "gettingToPhilosophy/gettingToPhilosophy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D005E9921D1DB3150019AED1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2026E3E8FBD5DCF7F202AD /* Pods-gettingToPhilosophy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = gettingToPhilosophy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bluelotuslabs.gettingToPhilosophy;
+				PRODUCT_BUNDLE_IDENTIFIER = ptb.gettingToPhilosophy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "gettingToPhilosophy/gettingToPhilosophy-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		D005E9941D1DB3150019AED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1BE03A03C6A1B9E480D06A /* Pods-gettingToPhilosophyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = gettingToPhilosophyTests/Info.plist;
@@ -431,6 +621,7 @@
 		};
 		D005E9951D1DB3150019AED1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1872EB6AB55C2E286EB4790E /* Pods-gettingToPhilosophyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = gettingToPhilosophyTests/Info.plist;
@@ -443,6 +634,7 @@
 		};
 		D005E9971D1DB3150019AED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24810A014758C09C1AAEC54 /* Pods-gettingToPhilosophyUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = gettingToPhilosophyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +646,7 @@
 		};
 		D005E9981D1DB3150019AED1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B47C596379BCBA85BAA0A424 /* Pods-gettingToPhilosophyUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = gettingToPhilosophyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +675,7 @@
 				D005E9921D1DB3150019AED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D005E9931D1DB3150019AED1 /* Build configuration list for PBXNativeTarget "gettingToPhilosophyTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +684,7 @@
 				D005E9951D1DB3150019AED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D005E9961D1DB3150019AED1 /* Build configuration list for PBXNativeTarget "gettingToPhilosophyUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +693,7 @@
 				D005E9981D1DB3150019AED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
