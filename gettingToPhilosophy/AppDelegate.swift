@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct myVariables {
+    static var myURL = "https://en.wikipedia.org/wiki/"
+    //static var dymeURL = "http://localhost:5000"
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
