@@ -9,8 +9,8 @@
 import UIKit
 
 struct myVariables {
-    static var myURL = "https://en.wikipedia.org/wiki/"
-    //static var dymeURL = "http://localhost:5000"
+    static var myURL = "http://localhost:4000"
+    // static var myURL = "https://en.wikipedia.org/wiki/"
 }
 
 @UIApplicationMain

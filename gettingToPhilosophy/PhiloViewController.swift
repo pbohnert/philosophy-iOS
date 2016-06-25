@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class PhiloViewController: UIViewController, UITextFieldDelegate {
-    var ourURL:String!
+    var inputURL:String!
     var completePath:String!
     var navTitle = "Getting to Philosophy"
     @IBOutlet weak var titleLabel: UILabel!
@@ -39,7 +39,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(inputText: UITextField!) -> Bool {
         
-        ourURL = inputText.text
+        self.inputURL = inputText.text
         
         //textField.resignFirstResponder()  //if desired
         findPhilo()
@@ -49,11 +49,12 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     func findPhilo() {
         self.messageLabel.text = ""
         
-        if !ourURL!.hasPrefix("https://en.wikipedia.org") &&
-            !ourURL!.hasPrefix("http://en.wikipedia.org") &&
-            !ourURL!.hasPrefix("en.wikipedia.org") &&
-            !ourURL!.hasPrefix("www.wikipedia.org") &&
-            !ourURL!.hasPrefix("wikipedia.org")
+        if !self.inputURL!.hasPrefix("https://en.wikipedia.org") &&
+            !self.inputURL!.hasPrefix("https://www.wikipedia.org") &&
+            !self.inputURL!.hasPrefix("http://en.wikipedia.org") &&
+            !self.inputURL!.hasPrefix("http://www.wikipedia.org") &&
+            !self.inputURL!.hasPrefix("en.wikipedia.org") &&
+            !self.inputURL!.hasPrefix("wikipedia.org")
         {
             self.messageLabel.text = "Doesn't seem to be a Wikipedia URL.  Try again?"
         } // end of if we don't have what looks like a valid URL
@@ -77,13 +78,15 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
         self.messageLabel.text = ""
     }
 
-    @IBAction func textEntered(sender: AnyObject) {
+  /*  @IBAction func textEntered(sender: AnyObject) {
         self.messageLabel.text = ""
         let inputURL = inputText.text
         
         if !inputURL!.hasPrefix("https://en.wikipedia.org") &&
-            !inputURL!.hasPrefix("en.wikipedia.org") &&
+            !inputURL!.hasPrefix("https://www.wikipedia.org") &&
             !inputURL!.hasPrefix("http://en.wikipedia.org") &&
+            !inputURL!.hasPrefix("http://www.wikipedia.org") &&
+            !inputURL!.hasPrefix("en.wikipedia.org") &&
             !inputURL!.hasPrefix("wikipedia.org")
             {
             self.messageLabel.text = "Doesn't seem to be a Wikipedia URL.  Try again?"
@@ -102,7 +105,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
             print("just back from send Code")
            }
         } // end of else
-    }
+    } */
     
     
     override func didReceiveMemoryWarning() {
@@ -118,12 +121,11 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     
     func searchWithURL(completionHandler: (String?, NSError?) -> ()) -> () {
         
-        let url = "www.wikipedia.org"
         var myJSON:JSON!
         
         showLoadingProgress()
 
-        Alamofire.request(.POST, myVariables.myURL + "/search?JSON=1", parameters:  ["url": url]).responseJSON { response in
+        Alamofire.request(.POST, myVariables.myURL + "/search?JSON=1", parameters:  ["url": self.inputURL]).responseJSON { response in
             
             guard let data = response.result.value else{
                 print("Request failed with error")
