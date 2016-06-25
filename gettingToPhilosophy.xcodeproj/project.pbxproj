@@ -58,6 +58,7 @@
 		D005E98B1D1DB3150019AED1 /* gettingToPhilosophyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gettingToPhilosophyUITests.swift; sourceTree = "<group>"; };
 		D005E98D1D1DB3150019AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D005E9991D1DB9580019AED1 /* PhiloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhiloViewController.swift; sourceTree = "<group>"; };
+		D02D713D1D1EBB75005C6A66 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		D0DE46D81D1DBDCA00484D0E /* gettingToPhilosophy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gettingToPhilosophy-Bridging-Header.h"; sourceTree = "<group>"; };
 		E24810A014758C09C1AAEC54 /* Pods-gettingToPhilosophyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gettingToPhilosophyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gettingToPhilosophyUITests/Pods-gettingToPhilosophyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F585711A1D49F765A9214041 /* Pods_gettingToPhilosophy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gettingToPhilosophy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +141,7 @@
 		D005E96A1D1DB3150019AED1 /* gettingToPhilosophy */ = {
 			isa = PBXGroup;
 			children = (
+				D02D713D1D1EBB75005C6A66 /* MBProgressHUD.h */,
 				D005E9991D1DB9580019AED1 /* PhiloViewController.swift */,
 				D005E96F1D1DB3150019AED1 /* Main.storyboard */,
 				D005E96B1D1DB3150019AED1 /* AppDelegate.swift */,

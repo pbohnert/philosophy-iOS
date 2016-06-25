@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Philo View Controller-->
@@ -16,9 +17,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter a Wikipedia URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFh-iL-ynj">
+                                <rect key="frame" x="42" y="118" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://en.wikipedia.org/wiki/Main_Page" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-sM-fLO">
+                                <rect key="frame" x="42" y="160" width="278" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-al-1SM">
+                                <rect key="frame" x="42" y="211" width="278" height="189"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fko-1H-gN3">
+                                <rect key="frame" x="42" y="191" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.50588238240000005" blue="0.0039215688589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xgk-al-1SM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5nW-yt-u04"/>
+                            <constraint firstItem="cFh-iL-ynj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7aT-Ps-yzH"/>
+                            <constraint firstItem="Xgk-al-1SM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="147" id="Gtk-Ch-TVE"/>
+                            <constraint firstItem="Xgk-al-1SM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="MEk-da-W0O"/>
+                            <constraint firstItem="9ai-sM-fLO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NcD-7v-sA6"/>
+                            <constraint firstItem="9ai-sM-fLO" firstAttribute="leading" secondItem="cFh-iL-ynj" secondAttribute="leading" id="Pm0-tz-gde"/>
+                            <constraint firstItem="Xgk-al-1SM" firstAttribute="leading" secondItem="cFh-iL-ynj" secondAttribute="leading" id="QWo-nq-yIp"/>
+                            <constraint firstItem="9ai-sM-fLO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="TDD-yb-vQd"/>
+                            <constraint firstItem="9ai-sM-fLO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="WN1-A9-CSZ"/>
+                            <constraint firstItem="cFh-iL-ynj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="YG4-ut-xFT"/>
+                            <constraint firstItem="cFh-iL-ynj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="s5k-mK-zIp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OSq-CV-lrm"/>
+                    <connections>
+                        <outlet property="inputText" destination="9ai-sM-fLO" id="hIW-Pn-Jbz"/>
+                        <outlet property="messageLabel" destination="Fko-1H-gN3" id="fbG-LI-TX8"/>
+                        <outlet property="pathDisplay" destination="Xgk-al-1SM" id="Tco-OK-gcG"/>
+                        <outlet property="titleLabel" destination="cFh-iL-ynj" id="aFb-rW-uod"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
