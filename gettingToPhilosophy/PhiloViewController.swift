@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class PhiloViewController: UIViewController {
+class PhiloViewController: UIViewController, UITextFieldDelegate {
     var ourURL:String!
     var completePath:String!
     var navTitle = "Getting to Philosophy"
@@ -20,7 +20,9 @@ class PhiloViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.inputText.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -34,7 +36,75 @@ class PhiloViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    func textFieldShouldReturn(inputText: UITextField!) -> Bool {
+        
+        ourURL = inputText.text
+        
+        //textField.resignFirstResponder()  //if desired
+        findPhilo()
+        return true
+    }
+    
+    func findPhilo() {
+        self.messageLabel.text = ""
+        
+        if !ourURL!.hasPrefix("https://en.wikipedia.org") &&
+            !ourURL!.hasPrefix("http://en.wikipedia.org") &&
+            !ourURL!.hasPrefix("en.wikipedia.org") &&
+            !ourURL!.hasPrefix("www.wikipedia.org") &&
+            !ourURL!.hasPrefix("wikipedia.org")
+        {
+            self.messageLabel.text = "Doesn't seem to be a Wikipedia URL.  Try again?"
+        } // end of if we don't have what looks like a valid URL
+            
+        else {
+            
+            // let's go see if we can find Philosophy
+            searchWithURL { (success, error) -> () in
+                if success != "Success" {
+                    self.messageLabel.text = "Philosophy not found this time."
+                }
+                else  {
+                    self.messageLabel.text = ""
+                }
+                print("just back from send Code")
+            }
+        } // end of else
+    }
 
+    @IBAction func textEdited(sender: AnyObject) {
+        self.messageLabel.text = ""
+    }
+
+    @IBAction func textEntered(sender: AnyObject) {
+        self.messageLabel.text = ""
+        let inputURL = inputText.text
+        
+        if !inputURL!.hasPrefix("https://en.wikipedia.org") &&
+            !inputURL!.hasPrefix("en.wikipedia.org") &&
+            !inputURL!.hasPrefix("http://en.wikipedia.org") &&
+            !inputURL!.hasPrefix("wikipedia.org")
+            {
+            self.messageLabel.text = "Doesn't seem to be a Wikipedia URL.  Try again?"
+        } // end of if we don't have what looks like a valid URL
+        
+        else {
+        
+              // let's go see if we can find Philosophy
+          searchWithURL { (success, error) -> () in
+                if success != "Success" {
+                     self.messageLabel.text = "Philosophy not found this time."
+                 }
+            else  {
+                self.messageLabel.text = ""
+             }
+            print("just back from send Code")
+           }
+        } // end of else
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,7 +116,7 @@ class PhiloViewController: UIViewController {
         loading.labelText = "Finding Philosophy...";
     }
     
-    func loginToDymeAccount(completionHandler: (String?, NSError?) -> ()) -> () {
+    func searchWithURL(completionHandler: (String?, NSError?) -> ()) -> () {
         
         let url = "www.wikipedia.org"
         var myJSON:JSON!
