@@ -30,8 +30,8 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
         
         navigationItem.title = self.navTitle
-        self.messageLabel.text = ""
-        self.titleLabel.text = "Enter a Wikipedia URL:"
+        //self.messageLabel.text = ""
+        self.titleLabel.text = "Enter a subject to start with:"
         // self.messageLabel.text = "Please enter a valid Wikipedia URL"
         
         // Do any additional setup after loading the view.
@@ -48,22 +48,9 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     
     func findPhilo() {
         self.messageLabel.text = ""
-        
-        if !self.inputURL!.hasPrefix("https://en.wikipedia.org") &&
-            !self.inputURL!.hasPrefix("https://www.wikipedia.org") &&
-            !self.inputURL!.hasPrefix("http://en.wikipedia.org") &&
-            !self.inputURL!.hasPrefix("http://www.wikipedia.org") &&
-            !self.inputURL!.hasPrefix("en.wikipedia.org") &&
-            !self.inputURL!.hasPrefix("www.wikipedia.org") &&
-            !self.inputURL!.hasPrefix("wikipedia.org")
-        {
-            self.messageLabel.text = "Doesn't seem to be a Wikipedia URL.  Try again?"
-        } // end of if we don't have what looks like a valid URL
             
-        else {
-            
-            // let's go see if we can find Philosophy
-            searchWithURL { (success, error) -> () in
+        // let's go see if we can find Philosophy
+         searchWithURL { (success, error) -> () in
                 if success != "Success" {
                     self.messageLabel.text = "Philosophy not found this time."
                 }
@@ -72,7 +59,6 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
                 }
                 print("just back from send Code")
             }
-        } // end of else
     }
 
     @IBAction func textEdited(sender: AnyObject) {
