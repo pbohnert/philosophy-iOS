@@ -123,18 +123,19 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
         //var myJSON:JSON!
         let myURL = myVariables.myURL + "/search"
         var success:String = "success"
+        print("my url string is: \(myURL)")
         
         
         showLoadingProgress()
         //test code for checking return JSON as a string
-        //print("my url string is: \(myURL)")
-        /* Alamofire.request(.GET, myVariables.myURL + "/search", parameters:  ["url": self.inputURL]).responseString { _, s, _ in print(s) } */
+        /*Alamofire.request(.GET, myVariables.myURL + "/search", parameters:  ["url": self.inputURL]).responseString { p, s, r in print(p, s, r) } */
         
-        Alamofire.request(.POST, myURL, parameters: ["url": self.inputURL]).responseJSON() { (_, _, JSON) in
+        Alamofire.request(.GET, myURL, parameters: ["url": self.inputURL]).responseJSON() { (_, _, JSON) in
             print(JSON.value)  //returns an array of NSDictionary
             
             if let top = JSON.value as? NSDictionary {
                 print("top equals \(top)")
+                self.pathDisplay.text = top["body"] as? String
                 
             } else {
                 success = "no success"
@@ -144,7 +145,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
             MBProgressHUD.hideHUDForView(self.view, animated: true)
             self.navigationItem.title = self.navTitle
             completionHandler(success, nil)
-        } 
+        }
     }
 
     /*
