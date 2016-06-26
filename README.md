@@ -1,4 +1,4 @@
-# philosophy-iOS for "Getting to Philosophy"
+# philosophy-iOS
 =================
 This iOS app part of an application to satisfy the requirements of the 'Getting to Philosophy' exercise.
 
