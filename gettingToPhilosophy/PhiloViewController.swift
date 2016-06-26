@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 class PhiloViewController: UIViewController, UITextFieldDelegate {
     var inputURL:String!
@@ -121,33 +120,31 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     
     func searchWithURL(completionHandler: (String?, NSError?) -> ()) -> () {
         
-        var myJSON:JSON!
+        //var myJSON:JSON!
+        let myURL = myVariables.myURL + "/search"
+        var success:String = "success"
+        
         
         showLoadingProgress()
-
-        Alamofire.request(.POST, myVariables.myURL + "/search?JSON=1", parameters:  ["url": self.inputURL]).responseJSON { response in
+        //test code for checking return JSON as a string
+        //print("my url string is: \(myURL)")
+        /* Alamofire.request(.GET, myVariables.myURL + "/search", parameters:  ["url": self.inputURL]).responseString { _, s, _ in print(s) } */
+        
+        Alamofire.request(.POST, myURL, parameters: ["url": self.inputURL]).responseJSON() { (_, _, JSON) in
+            print(JSON.value)  //returns an array of NSDictionary
             
-            guard let data = response.result.value else{
-                print("Request failed with error")
-                return
+            if let top = JSON.value as? NSDictionary {
+                print("top equals \(top)")
+                
+            } else {
+                success = "no success"
             }
-            
-            myJSON = JSON(data)
-            
-                    print("myJSON equals \(myJSON)")
-                 /*   if let myString = top["Message"] as? String {
-                        if myString.hasPrefix("Success") {
-                            // do something here
-                        }
-                    } */
-                    
-                    
             
             // Hide the progress indicator
             MBProgressHUD.hideHUDForView(self.view, animated: true)
-            self.navigationItem.title = "Login"
-            completionHandler("complete", nil)
-        }
+            self.navigationItem.title = self.navTitle
+            completionHandler(success, nil)
+        } 
     }
 
     /*
