@@ -12,7 +12,7 @@ import Alamofire
 class PhiloViewController: UIViewController, UITextFieldDelegate {
     var inputURL:String!
     var completePath:String!
-    var numHops:Int!
+    var numHops:String!
     var navTitle = "Getting to Philosophy"
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var inputText: UITextField!
@@ -68,7 +68,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
                     self.messageLabel.text = "Philosophy not found this time."
                 }
                 else  {
-                    self.messageLabel.text = "Philosophy found!  Number of hops was" + String(self.numHops)
+                    self.messageLabel.text = "Philosophy found!  Number of hops was" + self.numHops
                 }
                 print("just back from send Code")
             }
@@ -109,6 +109,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
             if let top = JSON.value as? NSDictionary {
                 print("top equals \(top)")
                 self.pathDisplay.text = top["body"] as? String
+                self.numHops = top["hops"] as? String
                 
             } else {
                 success = "no success"
