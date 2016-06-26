@@ -12,6 +12,7 @@ import Alamofire
 class PhiloViewController: UIViewController, UITextFieldDelegate {
     var inputURL:String!
     var completePath:String!
+    var numHops:Int!
     var navTitle = "Getting to Philosophy"
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var inputText: UITextField!
@@ -53,6 +54,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
             !self.inputURL!.hasPrefix("http://en.wikipedia.org") &&
             !self.inputURL!.hasPrefix("http://www.wikipedia.org") &&
             !self.inputURL!.hasPrefix("en.wikipedia.org") &&
+            !self.inputURL!.hasPrefix("www.wikipedia.org") &&
             !self.inputURL!.hasPrefix("wikipedia.org")
         {
             self.messageLabel.text = "Doesn't seem to be a Wikipedia URL.  Try again?"
@@ -66,7 +68,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
                     self.messageLabel.text = "Philosophy not found this time."
                 }
                 else  {
-                    self.messageLabel.text = ""
+                    self.messageLabel.text = "Philosophy found!  Number of hops was" + String(self.numHops)
                 }
                 print("just back from send Code")
             }
@@ -76,35 +78,6 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     @IBAction func textEdited(sender: AnyObject) {
         self.messageLabel.text = ""
     }
-
-  /*  @IBAction func textEntered(sender: AnyObject) {
-        self.messageLabel.text = ""
-        let inputURL = inputText.text
-        
-        if !inputURL!.hasPrefix("https://en.wikipedia.org") &&
-            !inputURL!.hasPrefix("https://www.wikipedia.org") &&
-            !inputURL!.hasPrefix("http://en.wikipedia.org") &&
-            !inputURL!.hasPrefix("http://www.wikipedia.org") &&
-            !inputURL!.hasPrefix("en.wikipedia.org") &&
-            !inputURL!.hasPrefix("wikipedia.org")
-            {
-            self.messageLabel.text = "Doesn't seem to be a Wikipedia URL.  Try again?"
-        } // end of if we don't have what looks like a valid URL
-        
-        else {
-        
-              // let's go see if we can find Philosophy
-          searchWithURL { (success, error) -> () in
-                if success != "Success" {
-                     self.messageLabel.text = "Philosophy not found this time."
-                 }
-            else  {
-                self.messageLabel.text = ""
-             }
-            print("just back from send Code")
-           }
-        } // end of else
-    } */
     
     
     override func didReceiveMemoryWarning() {
