@@ -13,6 +13,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     var inputURL:String!
     var completePath:String!
     var numHops:String!
+    var philosophyFound:Bool = false
     var navTitle = "Getting to Philosophy"
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var inputText: UITextField!
@@ -48,9 +49,13 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
     
     func findPhilo() {
         self.messageLabel.text = ""
-            
-        // let's go see if we can find Philosophy
-         searchWithURL { (success, error) -> () in
+        
+        if self.inputURL == "" {
+            self.messageLabel.text = "Please enter a subject to search for."
+        }
+        else {
+            // let's go see if we can find Philosophy
+            searchWithURL { (success, error) -> () in
                 if success != "Success" {
                     self.messageLabel.text = "Philosophy not found this time."
                 }
@@ -59,7 +64,9 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
                 }
                 print("just back from send Code")
             }
-    }
+            
+        } // end of else
+    } // end of findPhilo
 
     @IBAction func textEdited(sender: AnyObject) {
         self.messageLabel.text = ""
@@ -81,7 +88,7 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
         
         //var myJSON:JSON!
         let myURL = myVariables.myURL + "/search"
-        var success:String = "success"
+        var success:String = "nope"
         print("my url string is: \(myURL)")
         
         
@@ -91,12 +98,18 @@ class PhiloViewController: UIViewController, UITextFieldDelegate {
         
         Alamofire.request(.GET, myURL, parameters: ["url": self.inputURL]).responseJSON() { (_, _, JSON) in
             print(JSON.value)  //returns an array of NSDictionary
+        
+            
+//            var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(JSON.value, options: NSJSONReadingOptions.MutableContainers) as NSDictionary
             
             if let top = JSON.value as? NSDictionary {
-                print("top equals \(top)")
-                self.pathDisplay.text = top["body"] as? String
-                self.numHops = top["hops"] as? String
-                
+                //print("top equals \(top)")
+                self.pathDisplay.text = top["completePath"] as? String
+                self.numHops = top["hopCount"] as? String
+                self.philosophyFound = (top["philosophyFound"] as? Bool)!
+                if self.philosophyFound {
+                    success = "Success"
+                }
             } else {
                 success = "no success"
             }
