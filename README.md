@@ -11,3 +11,5 @@ This particular repo is a Swift application to provide a front end for the exerc
 
 * [Alamofire](https://github.com/Alamofire/Alamofire)
 * [MBProgressHUD] (https://github.com/jdg/MBProgressHUD)
+
+![PhiloGif](findingPhilo2.gif)
